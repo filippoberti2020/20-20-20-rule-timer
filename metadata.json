@@ -1,0 +1,15 @@
+{
+    "name" : "20 20 20 Rule Timer",
+    "description" : "A GNOME extension timer to remind users to take breaks and reduce eye strain by following the 20'20'20 rule.",
+    "shell-version" : [
+        "3.36",
+	"3.38",
+	"40",
+	"43",
+	"45"
+    ],
+    "url" : "https://github.com/filippoberti2020/20-20-20-rule-timer",
+    "uuid" : "filippoberti57@gmail.com",
+    "version" : 1.0,
+    "settings-schema": "org.gnome.shell.extensions.example"
+}
