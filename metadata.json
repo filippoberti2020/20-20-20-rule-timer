@@ -9,7 +9,6 @@
 	"45"
     ],
     "url" : "https://github.com/filippoberti2020/20-20-20-rule-timer",
-    "uuid" : "filippoberti57@gmail.com",
-    "version" : 1.0,
-    "settings-schema": "org.gnome.shell.extensions.example"
+    "uuid" : "202020ruletimer@202020ruletimer.com",
+    "version" : 1.0
 }
