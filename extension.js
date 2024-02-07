@@ -20,17 +20,6 @@ class Indicator extends PanelMenu.Button {
 
       
        
-        this.toggleSwitch = new PopupMenu.PopupSwitchMenuItem('Enable Timer', this.enableByDefault);
-        this.toggleSwitch.connect('toggled', (item) => {
-            if (item.state) {
-                // Code to enable the notification/timer
-                showNotification();
-            } else {
-                // Code to disable the notification/timer
-                Mainloop.source_remove(notificationTimeoutId);
-            }
-        });
-        this.menu.addMenuItem(this.toggleSwitch);
 
         let item = new PopupMenu.PopupMenuItem(_('Show Notification'));
         item.connect('activate', () => {
@@ -45,7 +34,7 @@ let notificationTimeoutId;
 
 function showNotification() {
     Main.notify('Time to rest your eyes', 'Look 20 feet away for 20 seconds');
-    notificationTimeoutId = Mainloop.timeout_add_seconds(30, () => {
+    notificationTimeoutId = Mainloop.timeout_add_seconds(1200, () => {
         showNotification();
         return false;
     });
