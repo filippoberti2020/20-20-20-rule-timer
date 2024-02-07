@@ -22,6 +22,11 @@ To install the 20 20 20 Rule Timer GNOME extension, follow these steps:
 
 Once installed, the extension will start sending regular notifications according to the 20-20-20 rule.
 
+## Future Features to implement
+
+- **Settings**: Adding the setting section to the extension to give the ability to enable or disable the timer by default.
+- **Toggle Switch**: Adding a toggle switch to allow the user to turn the timer off at any time.
+
 ## Support
 
 For any questions or feedback, please contact us at 202020timer@gmail.com.
