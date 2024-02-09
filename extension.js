@@ -18,7 +18,9 @@ class Indicator extends PanelMenu.Button {
             style_class: 'system-status-icon',
         }));
 
-      
+        setTimeout(function() {
+            showNotification();
+        }, 1200000); // 20 minutes in milliseconds(1200000)
        
 
         let item = new PopupMenu.PopupMenuItem(_('Show Notification'));
