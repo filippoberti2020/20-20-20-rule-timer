@@ -17,8 +17,19 @@ For more information about the 20-20-20 rule, you can refer to [NVISION Eye Cent
 
 ## Installation
 
-To install the 20 20 20 Rule Timer GNOME extension, follow these steps:
+To install this extension, follow these steps:
 
+1. Create a folder named `202020ruletimer@202020ruletimer.com` in the following path:
+
+`~/.local/share/gnome-shell/extensions/`
+
+2. Paste all the files from this repository into the newly created folder.
+
+3. Restart GNOME Shell. You can do this by pressing `Alt` + `F2`, then typing `r` and pressing `Enter`, or by logging out and logging back in.
+
+4. After restarting GNOME Shell, enable the extension using GNOME Tweaks or Extensions application.
+
+5. Once enabled, you should see the functionality provided by this extension.
 
 ## Usage
 
