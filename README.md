@@ -22,7 +22,7 @@ To install this extension, you have two options:
 
 ### Manual Installation
 1. Create a folder named `202020ruletimer@202020ruletimer.com` in the path: `~/.local/share/gnome-shell/extensions/`.
-2. Copy all files from the extension repository into the newly created folder.
+2. Copy all files inside `202020ruletimer@202020ruletimer.com` folder of this repository into the newly created folder.
 3. Restart GNOME Shell by pressing `Alt` + `F2`, typing `r`, and pressing `Enter`, or by logging out and back in.
 4. Enable the extension using GNOME Tweaks or the Extensions application.
 5. Once enabled, you will have access to the extension's functionality[1][3].
