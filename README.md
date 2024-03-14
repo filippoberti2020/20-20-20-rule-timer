@@ -15,21 +15,22 @@ For more information about the 20-20-20 rule, you can refer to [NVISION Eye Cent
 - **Regular Reminders**: Receive a notification every 20 minutes to look at something 20 feet away for 20 seconds.
 - **Integration**: Seamlessly integrated into the GNOME desktop environment.
 
+  
 ## Installation
 
-To install this extension, follow these steps:
+To install this extension, you have two options:
 
-1. Create a folder named `202020ruletimer@202020ruletimer.com` in the following path:
+### Manual Installation
+1. Create a folder named `202020ruletimer@202020ruletimer.com` in the path: `~/.local/share/gnome-shell/extensions/`.
+2. Copy all files from the extension repository into the newly created folder.
+3. Restart GNOME Shell by pressing `Alt` + `F2`, typing `r`, and pressing `Enter`, or by logging out and back in.
+4. Enable the extension using GNOME Tweaks or the Extensions application.
+5. Once enabled, you will have access to the extension's functionality[1][3].
 
-`~/.local/share/gnome-shell/extensions/`
-
-2. Paste all the files from this repository into the newly created folder.
-
-3. Restart GNOME Shell. You can do this by pressing `Alt` + `F2`, then typing `r` and pressing `Enter`, or by logging out and logging back in.
-
-4. After restarting GNOME Shell, enable the extension using GNOME Tweaks or Extensions application.
-
-5. Once enabled, you should see the functionality provided by this extension.
+### Installation via GNOME Extension Store
+1. Visit the [20 20 20 Rule Timer extension page](https://extensions.gnome.org/extension/6828/20-20-20-rule-timer/) on the GNOME Extension website.
+2. Click on "Install" to add the extension to your GNOME desktop.
+3. Enable the extension using GNOME Tweaks or the Extensions application.
 
 ## Usage
 
