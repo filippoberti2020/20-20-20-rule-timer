@@ -1,9 +1,24 @@
-const { GObject, St, GLib } = imports.gi;
-const ExtensionUtils = imports.misc.extensionUtils;
-const Main = imports.ui.main;
-const PanelMenu = imports.ui.panelMenu;
-const PopupMenu = imports.ui.popupMenu;
-const _ = ExtensionUtils.gettext;
+import GObject from 'gi://GObject';
+import St from 'gi://St';
+import GLib from 'gi://GLib';
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
+import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
+
+import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
+
+
+let notificationTimeoutId;
+
+function showNotification() {
+    Main.notify('Time to rest your eyes', 'Look 20 feet away for 20 seconds');
+    notificationTimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 1200, () => {
+        showNotification();
+        notificationTimeoutId = null;
+        return GLib.SOURCE_REMOVE;
+    });
+}
+
 
 const Indicator = GObject.registerClass(
 class Indicator extends PanelMenu.Button {
@@ -26,6 +41,7 @@ class Indicator extends PanelMenu.Button {
         });
         this.menu.addMenuItem(item);
     }
+
     destroy() {
         if (this._timeoutId) {
             GLib.Source.remove(this._timeoutId);
@@ -34,26 +50,10 @@ class Indicator extends PanelMenu.Button {
     }
 });
 
-let notificationTimeoutId;
-
-function showNotification() {
-    Main.notify('Time to rest your eyes', 'Look 20 feet away for 20 seconds');
-    notificationTimeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 1200, () => {
-        showNotification();
-        notificationTimeoutId = null;
-        return GLib.SOURCE_REMOVE;
-    });
-}
-
-class Extension {
-    constructor(uuid) {
-        this._uuid = uuid;
-        ExtensionUtils.initTranslations(this.gettext);
-    }
-
+export default class EyeCareReminderExtension extends Extension {
     enable() {
         this._indicator = new Indicator();
-        Main.panel.addToStatusArea(this._uuid, this._indicator);
+        Main.panel.addToStatusArea(this.uuid, this._indicator);
     }
 
     disable() {
@@ -65,10 +65,5 @@ class Extension {
             GLib.Source.remove(notificationTimeoutId);
             notificationTimeoutId = null;
         }
-       
     }
-}
-
-function init(meta) {
-    return new Extension(meta.uuid);
 }
